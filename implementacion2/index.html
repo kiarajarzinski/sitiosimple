@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            .fondo1 { 
+                background-color: black;
+                color: ghostwhite;
+            }
+            .fondo2 {
+                background-color: ghostwhite ;
+                color: black;
+            }
+            .fondo3 {
+                background-color: aqua;
+                color: crimson;
+            }
+        </style>
+    </head>
+    <body>
+            <h1> implementacion 2 </h1>
+            <input type="text" id="caja" placeholder="Escriba aqui">
+            <button id="boton">Cambiar fondo</button> 
+            <script>
+                const miCaja = document.getElementById('caja');
+                miCaja.addEventListener('keypress', function(evento){
+                    if (evento.key === 'Enter') {
+                        alert(miCaja.value)
+                    }
+                });
+                const miBoton = document.getElementById('boton');
+                let cambioColor = 1
+                miBoton.addEventListener('click', function(){
+                    if ( cambioColor === 1 ) {
+                    document.body.className = 'fondo1';
+                    cambioColor = 2 }
+                    else if( cambioColor === 2 ) {
+                    document.body.className = 'fondo2';
+                    cambioColor = 3 }
+                    else   {
+                    document.body.className = 'fondo3';
+                    cambioColor = 1 }
+                }
+            );
+
+
+            </script>
+    </body>
+</html>
